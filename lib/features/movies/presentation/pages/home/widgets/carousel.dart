@@ -69,7 +69,7 @@ class _CarouselViewState extends State<CarouselView> {
       children: [
         AnimatedContainer(
           duration: const Duration(seconds: 2),
-          curve: Curves.easeInOut,
+          curve: Curves.fastOutSlowIn,
           height: MediaQuery.of(context).size.height * 0.55,
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -128,7 +128,7 @@ class CarouselItem extends StatelessWidget {
         child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          elevation: 3,
+          elevation: 5,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: FadeInImage(

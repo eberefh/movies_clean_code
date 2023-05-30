@@ -38,7 +38,7 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   Future<List<ActorModel>> castMovieXid(String id) async {
     final url = Uri.https('api.themoviedb.org', '3/movie/$id/credits', {
       'api_key': ConstApp.apiKey,
-      'language': 'en-US',
+      'language': 'es-ES',
     });
     try {
       final response = await client.get(url);
@@ -56,7 +56,7 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   Future<List<MovieModel>> searchMovie(String query) async {
     final url = Uri.https('api.themoviedb.org', '3/search/movie', {
       'api_key': ConstApp.apiKey,
-      'language': 'en-US',
+      'language': 'es-ES',
       'query': query,
     });
     try {
@@ -78,7 +78,7 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   }) async {
     final url = Uri.https('api.themoviedb.org', '3/movie/$path', {
       'api_key': ConstApp.apiKey,
-      'language': 'en-US',
+      'language': 'es-ES',
       'page': page,
     });
     try {
